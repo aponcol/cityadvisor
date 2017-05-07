@@ -6,6 +6,7 @@
 [Bb]in/
 packages/
 TestResults/
+CityAdvisor.Tests/
 
 # globs
 Makefile.in
