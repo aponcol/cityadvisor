@@ -9,7 +9,8 @@
     "Microsoft.AspNet.WebApi.WebHost": "5.2.3",
     "Microsoft.AspNet.WebPages": "3.2.3",
     "Microsoft.Web.Infrastructure": "1.0.0",
-    "Newtonsoft.Json": "7.0.1"
+    "Newtonsoft.Json": "7.0.1",
+    "System.Net.Http": "4.3.1"
   },
   "frameworks": {
     "net45": {}
