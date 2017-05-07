@@ -10,26 +10,39 @@ using CityAdvisor.Controllers;
 namespace CityAdvisor.Tests.Controllers
 {
     [TestFixture]
-    public class HomeControllerTest
+    public class SuggestionsControllerTest
     {
-        [Test]
-        public void Index()
+        protected SuggestionsController controller;
+
+        [SetUp]
+        public void Init()
         {
-            // Arrange
-            var controller = new HomeController();
+            controller = new SuggestionsController();
+        }
 
-            // Act
-            var result = (ViewResult)controller.Index();
+        [Test]
+        public void resultOfIndexIsJsonObject()
+        {
+			var result = controller.Index();
+            Assert.IsInstanceOf(typeof(JsonResult), result);
+        }
 
-            var mvcName = typeof(Controller).Assembly.GetName();
-            var isMono = Type.GetType("Mono.Runtime") != null;
+        //[Test]
+        //public void resultWithNoParamsIsEmptySuggestionsArray()
+        //{
+        //    var result = controller.Index();
+        //    var suggestions = result.Data.ToString();
 
-            var expectedVersion = mvcName.Version.Major + "." + mvcName.Version.Minor;
-            var expectedRuntime = isMono ? "Mono" : ".NET";
+        //    Console.WriteLine(suggestions);
 
-            // Assert
-            Assert.AreEqual(expectedVersion, result.ViewData["Version"]);
-            Assert.AreEqual(expectedRuntime, result.ViewData["Runtime"]);
+        //    //Assert.IsNull(result.Data.GetType().GetProperty("suggestions"));
+        //}
+
+        [Test]
+        public void resultOfIndexWithExactMatchIsProperJsonObject()
+        {
+            var result = controller.Index("Alma");
+            Assert.IsNotEmpty(result.Data.ToString());
         }
     }
 }

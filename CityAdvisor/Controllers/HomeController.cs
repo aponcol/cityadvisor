@@ -11,6 +11,7 @@ namespace CityAdvisor.Controllers
     {
         public ActionResult Index()
         {
+
             var mvcName = typeof(Controller).Assembly.GetName();
             var isMono = Type.GetType("Mono.Runtime") != null;
 
