@@ -392,6 +392,7 @@
       "projectStyle": "ProjectJson"
     },
     "dependencies": {
+      "Geolocation": "1.1.1",
       "Microsoft.AspNet.Mvc": "5.2.3",
       "Microsoft.AspNet.Razor": "3.2.3",
       "Microsoft.AspNet.WebApi": "5.2.3",
@@ -400,11 +401,7 @@
       "Microsoft.AspNet.WebApi.WebHost": "5.2.3",
       "Microsoft.AspNet.WebPages": "3.2.3",
       "Microsoft.Web.Infrastructure": "1.0.0",
-      "Newtonsoft.Json": "7.0.1",
-      "Geolocation": {
-        "target": "Package",
-        "version": "[1.1.1, )"
-      }
+      "Newtonsoft.Json": "7.0.1"
     },
     "frameworks": {
       "net45": {}
