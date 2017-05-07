@@ -115,6 +115,15 @@
           "lib/net45/Newtonsoft.Json.dll": {}
         }
       },
+      "nunit.framework/2.63.0": {
+        "type": "package",
+        "compile": {
+          "lib/nunit.framework.dll": {}
+        },
+        "runtime": {
+          "lib/nunit.framework.dll": {}
+        }
+      },
       "CityAdvisor/1.0.0": {
         "type": "project",
         "framework": ".NETFramework,Version=v4.5",
@@ -244,6 +253,15 @@
         },
         "runtime": {
           "lib/net45/Newtonsoft.Json.dll": {}
+        }
+      },
+      "nunit.framework/2.63.0": {
+        "type": "package",
+        "compile": {
+          "lib/nunit.framework.dll": {}
+        },
+        "runtime": {
+          "lib/nunit.framework.dll": {}
         }
       },
       "CityAdvisor/1.0.0": {
@@ -396,6 +414,17 @@
         "tools/install.ps1"
       ]
     },
+    "nunit.framework/2.63.0": {
+      "sha512": "ylBuXo6oYOjZSxC6KSeDpa5OC8wZhG0gAh7VzBoaZOX5tEI1ghbkKkgG7MyhA/HN+42EPDSIohKHqki/O0N8Lw==",
+      "type": "package",
+      "path": "nunit.framework/2.63.0",
+      "files": [
+        "lib/nunit.framework.dll",
+        "lib/nunit.framework.xml",
+        "nunit.framework.2.63.0.nupkg.sha512",
+        "nunit.framework.nuspec"
+      ]
+    },
     "CityAdvisor/1.0.0": {
       "type": "project",
       "path": "../CityAdvisor/project.json",
@@ -404,7 +433,17 @@
   },
   "projectFileDependencyGroups": {
     "": [
-      "Newtonsoft.Json >= 7.0.1"
+      "Geolocation >= 1.1.1",
+      "Microsoft.AspNet.Mvc >= 5.2.3",
+      "Microsoft.AspNet.Razor >= 3.2.3",
+      "Microsoft.AspNet.WebApi >= 5.2.3",
+      "Microsoft.AspNet.WebApi.Client >= 5.2.3",
+      "Microsoft.AspNet.WebApi.Core >= 5.2.3",
+      "Microsoft.AspNet.WebApi.WebHost >= 5.2.3",
+      "Microsoft.AspNet.WebPages >= 3.2.3",
+      "Microsoft.Web.Infrastructure >= 1.0.0",
+      "Newtonsoft.Json >= 7.0.1",
+      "nunit.framework >= 2.63.0"
     ],
     ".NETFramework,Version=v4.5": []
   },
@@ -429,7 +468,20 @@
       }
     },
     "dependencies": {
-      "Newtonsoft.Json": "7.0.1"
+      "Geolocation": "1.1.1",
+      "Microsoft.AspNet.Mvc": "5.2.3",
+      "Microsoft.AspNet.Razor": "3.2.3",
+      "Microsoft.AspNet.WebApi": "5.2.3",
+      "Microsoft.AspNet.WebApi.Client": "5.2.3",
+      "Microsoft.AspNet.WebApi.Core": "5.2.3",
+      "Microsoft.AspNet.WebApi.WebHost": "5.2.3",
+      "Microsoft.AspNet.WebPages": "3.2.3",
+      "Microsoft.Web.Infrastructure": "1.0.0",
+      "Newtonsoft.Json": "7.0.1",
+      "nunit.framework": {
+        "target": "Package",
+        "version": "[2.63.0, )"
+      }
     },
     "frameworks": {
       "net45": {}
